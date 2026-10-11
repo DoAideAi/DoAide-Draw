@@ -32,7 +32,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
               key={`s-${c}`}
               onClick={() => dispatch({ type: 'SET_STROKE_COLOR', color: c })}
               className={`w-5 h-5 rounded-full border-2 transition-transform ${
-                state.strokeColor === c ? 'scale-125 border-indigo-500' : dark ? 'border-gray-600' : 'border-gray-300'
+                state.strokeColor === c ? 'scale-125 border-teal-600' : dark ? 'border-gray-600' : 'border-gray-300'
               }`}
               style={{ backgroundColor: c }}
             />
@@ -55,7 +55,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
             <button
               onClick={() => dispatch({ type: 'SET_FILL_COLOR', color: 'transparent' })}
               className={`w-5 h-5 rounded-full border-2 relative overflow-hidden ${
-                state.fillColor === 'transparent' ? 'border-indigo-500' : dark ? 'border-gray-600' : 'border-gray-300'
+                state.fillColor === 'transparent' ? 'border-teal-600' : dark ? 'border-gray-600' : 'border-gray-300'
               }`}
             >
               <div className="absolute inset-0 bg-white" />
@@ -66,7 +66,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
                 key={`f-${c}`}
                 onClick={() => dispatch({ type: 'SET_FILL_COLOR', color: c })}
                 className={`w-5 h-5 rounded-full border-2 transition-transform ${
-                  state.fillColor === c ? 'scale-125 border-indigo-500' : dark ? 'border-gray-600' : 'border-gray-300'
+                  state.fillColor === c ? 'scale-125 border-teal-600' : dark ? 'border-gray-600' : 'border-gray-300'
                 }`}
                 style={{ backgroundColor: c }}
               />
@@ -92,7 +92,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
                 key={`st-${c}`}
                 onClick={() => dispatch({ type: 'SET_FILL_COLOR', color: c })}
                 className={`w-5 h-5 rounded border-2 transition-transform ${
-                  state.fillColor === c ? 'scale-125 border-indigo-500' : dark ? 'border-gray-600' : 'border-gray-300'
+                  state.fillColor === c ? 'scale-125 border-teal-600' : dark ? 'border-gray-600' : 'border-gray-300'
                 }`}
                 style={{ backgroundColor: c }}
               />
@@ -112,7 +112,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
           max="20"
           value={state.strokeWidth}
           onChange={(e) => dispatch({ type: 'SET_STROKE_WIDTH', width: Number(e.target.value) })}
-          className="w-20 accent-indigo-500"
+          className="w-20 accent-teal-600"
         />
         <span className={`text-xs w-5 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>{state.strokeWidth}</span>
       </div>
@@ -129,7 +129,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
           step="0.1"
           value={state.opacity}
           onChange={(e) => dispatch({ type: 'SET_OPACITY', opacity: Number(e.target.value) })}
-          className="w-16 accent-indigo-500"
+          className="w-16 accent-teal-600"
         />
       </div>
 
@@ -145,7 +145,7 @@ export function SettingsBar({ store }: SettingsBarProps) {
               max="72"
               value={state.fontSize}
               onChange={(e) => dispatch({ type: 'SET_FONT_SIZE', size: Number(e.target.value) })}
-              className="w-16 accent-indigo-500"
+              className="w-16 accent-teal-600"
             />
             <span className={`text-xs w-5 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>{state.fontSize}</span>
           </div>

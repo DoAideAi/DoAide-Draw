@@ -54,7 +54,7 @@ export function LayerPanel({ store }: LayerPanelProps) {
             onClick={() => dispatch({ type: 'SET_ACTIVE_LAYER', id: layer.id })}
             className={`flex items-center gap-2 px-3 py-1.5 cursor-pointer transition-colors text-xs
               ${state.canvas.activeLayerId === layer.id
-                ? dark ? 'bg-indigo-500/20 text-indigo-300' : 'bg-indigo-50 text-indigo-700'
+                ? dark ? 'bg-teal-500/20 text-teal-300' : 'bg-teal-50 text-teal-700'
                 : dark ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-600 hover:bg-gray-50'
               }`}
           >

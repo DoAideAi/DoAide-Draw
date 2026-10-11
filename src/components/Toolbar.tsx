@@ -37,7 +37,7 @@ export function Toolbar({ store }: ToolbarProps) {
           title={`${t.label}${t.shortcut ? ` (${t.shortcut})` : ''}`}
           className={`w-9 h-9 flex items-center justify-center rounded-lg transition-colors
             ${state.tool === t.id
-              ? 'bg-indigo-500 text-white'
+              ? 'bg-teal-600 text-white'
               : dark
                 ? 'text-gray-300 hover:bg-gray-700'
                 : 'text-gray-600 hover:bg-gray-100'
