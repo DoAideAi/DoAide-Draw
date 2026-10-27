@@ -85,6 +85,7 @@ export default function App() {
 
   return (
     <div className={`w-screen h-screen overflow-hidden relative ${state.darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+      <h1 className="sr-only">DoAide Draw — Free Online Whiteboard & Drawing Tool</h1>
       <TopBar store={store} stageRef={stageRef} />
       <Toolbar store={store} />
       <DrawCanvas store={store} stageRef={stageRef} width={size.width} height={size.height} />

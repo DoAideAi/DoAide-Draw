@@ -4,19 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="description" content="DoAide Draw — Free online whiteboard and drawing tool. Sketch, diagram, and collaborate with an infinite canvas." />
+    <meta name="description" content="DoAide Draw — Free online whiteboard and drawing tool. Sketch, diagram, and collaborate with an infinite canvas. No login required." />
     <meta name="theme-color" content="#0D9488" />
+    <meta name="keywords" content="whiteboard, drawing tool, online whiteboard, free whiteboard, sketch, diagram, infinite canvas, collaborative drawing, DoAide Draw" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>DoAide Draw — Free Online Whiteboard</title>
+    <title>DoAide Draw — Free Online Whiteboard & Drawing Tool</title>
     <script defer src="https://analytics.doaide.com/script.js" data-website-id="da3e9ffc-0d7f-4e89-bec5-bc1ada7f397c"></script>
     <link rel="canonical" href="https://draw.doaide.com/" />
-    <meta property="og:title" content="DoAide Draw - Free Online Whiteboard & Drawing Tool | DoAide" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DoAide Draw — Free Online Whiteboard & Drawing Tool" />
     <meta property="og:description" content="Sketch, diagram, and draw on an infinite canvas. Free online whiteboard — no login required." />
     <meta property="og:url" content="https://draw.doaide.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DoAide" />
+    <meta property="og:image" content="https://draw.doaide.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DoAide Draw — Free Online Whiteboard & Drawing Tool" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DoAide Draw — Free Online Whiteboard & Drawing Tool" />
+    <meta name="twitter:description" content="Sketch, diagram, and draw on an infinite canvas. Free online whiteboard — no login required." />
+    <meta name="twitter:image" content="https://draw.doaide.com/og-image.png" />
+    <meta name="twitter:image:alt" content="DoAide Draw — Free Online Whiteboard & Drawing Tool" />
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,6 +42,9 @@
       "description": "Sketch, diagram, and draw on an infinite canvas. Free online whiteboard — no login required.",
       "applicationCategory": "DesignApplication",
       "operatingSystem": "Any",
+      "browserRequirements": "Requires a modern web browser with JavaScript enabled",
+      "screenshot": "https://draw.doaide.com/og-image.png",
+      "softwareVersion": "1.0.0",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -35,11 +54,17 @@
         "@type": "Organization",
         "name": "DoAide",
         "url": "https://doaide.com"
-      }
+      },
+      "featureList": "Freehand drawing, Shapes, Arrows, Text, Sticky notes, Layers, Export PNG/SVG/JSON, Dark mode"
     }
     </script>
   </head>
   <body>
+    <noscript>
+      <h1>DoAide Draw — Free Online Whiteboard & Drawing Tool</h1>
+      <p>DoAide Draw is a free online whiteboard and drawing tool. Sketch, diagram, and collaborate on an infinite canvas — no login required.</p>
+      <p>Please enable JavaScript to use DoAide Draw.</p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

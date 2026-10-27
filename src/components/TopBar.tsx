@@ -10,9 +10,9 @@ interface TopBarProps {
 }
 
 const DOAIDE_PRODUCTS = [
-  { name: 'Draw', href: 'https://draw.doaide.com', current: true },
-  { name: 'Chat', href: 'https://chat.doaide.com', current: false },
-  { name: 'Prompt', href: 'https://prompt.doaide.com', current: false },
+  { name: 'Draw', href: 'https://draw.doaide.com', current: true, comingSoon: false },
+  { name: 'Chat', href: 'https://chat.doaide.com', current: false, comingSoon: true },
+  { name: 'Prompt', href: 'https://prompt.doaide.com', current: false, comingSoon: true },
 ]
 
 export function TopBar({ store, stageRef }: TopBarProps) {
@@ -76,23 +76,34 @@ export function TopBar({ store, stageRef }: TopBarProps) {
                       DoAide Products
                     </span>
                   </div>
-                  {DOAIDE_PRODUCTS.map((p) => (
-                    <a
-                      key={p.name}
-                      href={p.href}
-                      target={p.current ? undefined : '_blank'}
-                      rel={p.current ? undefined : 'noopener noreferrer'}
-                      onClick={() => setMenuOpen(false)}
-                      className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors
-                        ${p.current
-                          ? dark ? 'text-teal-400 bg-teal-500/10' : 'text-teal-700 bg-teal-50'
-                          : dark ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-600 hover:bg-gray-50'
-                        }`}
-                    >
-                      <span className="font-medium">{p.name}</span>
-                      {p.current && <span className="text-[10px] ml-auto opacity-60">current</span>}
-                    </a>
-                  ))}
+                  {DOAIDE_PRODUCTS.map((p) =>
+                    p.comingSoon ? (
+                      <span
+                        key={p.name}
+                        className={`flex items-center gap-2 px-3 py-2 text-sm cursor-default
+                          ${dark ? 'text-gray-500' : 'text-gray-400'}`}
+                      >
+                        <span className="font-medium">{p.name}</span>
+                        <span className="text-[10px] ml-auto opacity-60">coming soon</span>
+                      </span>
+                    ) : (
+                      <a
+                        key={p.name}
+                        href={p.href}
+                        target={p.current ? undefined : '_blank'}
+                        rel={p.current ? undefined : 'noopener noreferrer'}
+                        onClick={() => setMenuOpen(false)}
+                        className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors
+                          ${p.current
+                            ? dark ? 'text-teal-400 bg-teal-500/10' : 'text-teal-700 bg-teal-50'
+                            : dark ? 'text-gray-300 hover:bg-gray-700' : 'text-gray-600 hover:bg-gray-50'
+                          }`}
+                      >
+                        <span className="font-medium">{p.name}</span>
+                        {p.current && <span className="text-[10px] ml-auto opacity-60">current</span>}
+                      </a>
+                    )
+                  )}
                   <div className={`px-3 py-2 border-t ${dark ? 'border-gray-700' : 'border-gray-100'}`}>
                     <a
                       href="https://doaide.com"
